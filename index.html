@@ -1,9 +1,9 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HapGUI Desktop â€“ download</title>
+<title>HapGUI Desktop – download</title>
 <meta name="description" content="HapGUI Desktop: phenotype analysis, GWAS and haplotype-phenotype analysis for rice, as a single Windows app. Free download.">
 <link rel="icon" href="favicon.png">
 <style>
@@ -54,7 +54,7 @@
 <main>
 <div class="wrap hero" id="download">
   <h1>HapGUI Desktop</h1>
-  <p class="lead">Phenotype analysis, GWAS and haplotypeâ€“phenotype analysis for rice in one Windows app. Everything it needs is inside the installer, so there is nothing else to set up.</p>
+  <p class="lead">Phenotype analysis, GWAS and haplotype–phenotype analysis for rice in one Windows app. Everything it needs is inside the installer, so there is nothing else to set up.</p>
   <p>
     <a class="btn" id="dl-setup" href="#">Download for Windows</a>
     <a class="btn alt" id="dl-zip" href="#">Portable version (.zip)</a>
@@ -132,11 +132,10 @@
       var z = a.find(function (x) { return /Portable\.zip$/i.test(x.name); });
       if (s) { setup.href = s.browser_download_url; setup.textContent = 'Download for Windows (' + mb(s.size) + ')'; }
       if (z) zip.href = z.browser_download_url;
-      meta.textContent = 'Version ' + String(rel.tag_name || '').replace(/^v/, '') + ' Â· Windows 10 or 11, 64-bit Â· free Â· released ' + new Date(rel.published_at).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+      meta.textContent = 'Version ' + String(rel.tag_name || '').replace(/^v/, '') + ' · Windows 10 or 11, 64-bit · free · released ' + new Date(rel.published_at).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
     })
     .catch(function () { /* no release yet or offline: the buttons open the releases page */ });
 })();
 </script>
 </body>
 </html>
-
