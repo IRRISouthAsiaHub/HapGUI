@@ -1,0 +1,142 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HapGUI Desktop â€“ download</title>
+<meta name="description" content="HapGUI Desktop: phenotype analysis, GWAS and haplotype-phenotype analysis for rice, as a single Windows app. Free download.">
+<link rel="icon" href="favicon.png">
+<style>
+  :root { --green:#0a5c0a; --green2:#157a15; --ink:#1c2b1c; --muted:#5b6b5b; --line:#dfe7df; --bg:#f6f9f6; --card:#fff; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:var(--bg); }
+  a { color:var(--green2); }
+  .wrap { max-width:1020px; margin:0 auto; padding:0 20px; }
+  header.top { background:#fff; border-bottom:1px solid var(--line); }
+  header.top .wrap { display:flex; align-items:center; justify-content:space-between; padding:12px 20px; gap:12px; }
+  header.top img { height:34px; }
+  header.top nav a { margin-left:18px; text-decoration:none; font-size:15px; color:var(--muted); }
+  header.top nav a:hover { color:var(--green); }
+  .hero { padding:56px 0 40px; }
+  .hero h1 { font-size:clamp(30px,5vw,46px); line-height:1.15; margin:0 0 14px; color:var(--green); }
+  .hero p.lead { font-size:19px; color:var(--muted); max-width:680px; margin:0 0 26px; }
+  .btn { display:inline-block; background:var(--green); color:#fff; text-decoration:none; padding:14px 26px; border-radius:8px; font-weight:600; font-size:17px; }
+  .btn:hover { background:var(--green2); }
+  .btn.alt { background:#fff; color:var(--green); border:1px solid var(--green); margin-left:10px; font-size:15px; padding:12px 20px; }
+  .meta { margin-top:12px; color:var(--muted); font-size:14px; }
+  .shot { margin-top:34px; border:1px solid var(--line); border-radius:10px; box-shadow:0 8px 28px rgba(10,60,10,.10); width:100%; display:block; background:#fff; }
+  section { padding:34px 0; }
+  section h2 { font-size:26px; margin:0 0 6px; color:var(--green); }
+  section > .wrap > p.sub { color:var(--muted); margin:0 0 20px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:16px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:18px 20px; }
+  .card h3 { margin:0 0 6px; font-size:18px; }
+  .card p { margin:0; color:var(--muted); font-size:15px; }
+  ol.steps { padding-left:22px; } ol.steps li { margin:8px 0; }
+  .note { background:#fff8e6; border:1px solid #f0dca0; border-radius:8px; padding:12px 16px; font-size:15px; }
+  table { border-collapse:collapse; width:100%; background:#fff; border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+  td { padding:10px 14px; border-bottom:1px solid var(--line); vertical-align:top; font-size:15px; } td:first-child { width:170px; font-weight:600; }
+  tr:last-child td { border-bottom:0; }
+  .shots { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:14px; }
+  .shots img { width:100%; border:1px solid var(--line); border-radius:8px; background:#fff; display:block; }
+  .shots figcaption { font-size:13.5px; color:var(--muted); margin-top:6px; } .shots figure { margin:0; }
+  footer { border-top:1px solid var(--line); background:#fff; margin-top:30px; padding:22px 0; color:var(--muted); font-size:14px; text-align:center; }
+  footer img { height:24px; vertical-align:middle; margin-right:10px; }
+  @media (max-width:560px) { header.top nav { display:none; } .btn.alt { margin:12px 0 0; } }
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <img src="irri-logo.png" alt="IRRI">
+  <nav><a href="#download">Download</a><a href="#features">Features</a><a href="#install">Install</a><a href="#help">Help</a></nav>
+</div></header>
+
+<main>
+<div class="wrap hero" id="download">
+  <h1>HapGUI Desktop</h1>
+  <p class="lead">Phenotype analysis, GWAS and haplotypeâ€“phenotype analysis for rice in one Windows app. Everything it needs is inside the installer, so there is nothing else to set up.</p>
+  <p>
+    <a class="btn" id="dl-setup" href="#">Download for Windows</a>
+    <a class="btn alt" id="dl-zip" href="#">Portable version (.zip)</a>
+  </p>
+  <p class="meta" id="dl-meta">Windows 10 or 11, 64-bit &middot; free</p>
+  <img class="shot" src="img/01-home.png" alt="HapGUI home screen">
+</div>
+
+<section id="features"><div class="wrap">
+  <h2>What it does</h2>
+  <p class="sub">Works offline on your computer. Your data never leaves it.</p>
+  <div class="grid">
+    <div class="card"><h3>Phenotype analysis</h3><p>Plots, descriptive statistics, ANOVA, correlation, BLUPs and genetic parameters (heritability, GCV, PCV, genetic advance).</p></div>
+    <div class="card"><h3>Genofile extract and converter</h3><p>Subset the built-in 3K-RICE data or your own VCF (diploid or polyploid) to your lines, with PCA, LD decay and gene annotation. An ID mapping file reconciles different sample names.</p></div>
+    <div class="card"><h3>GWAS (mrMLM)</h3><p>Multi-locus GWAS on your extracted genotypes, with Manhattan and QQ plots and a significant-marker table.</p></div>
+    <div class="card"><h3>GWASpoly</h3><p>Association analysis for polyploid data, with ploidy filled in from the extraction.</p></div>
+    <div class="card"><h3>Visualization</h3><p>Manhattan, QQ and circular plots for your results.</p></div>
+    <div class="card"><h3>Haplo-Pheno</h3><p>Candidate genes, haplotypes and superior-haplotype tables for a locus, with downloadable results.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="shots">
+    <figure><img src="img/03-pheno-loaded.png" alt="Phenotype analysis" loading="lazy"><figcaption>Phenotype analysis</figcaption></figure>
+    <figure><img src="img/18-gwas-result.png" alt="GWAS result" loading="lazy"><figcaption>GWAS results</figcaption></figure>
+    <figure><img src="img/22-viz-manhattan.png" alt="Manhattan plot" loading="lazy"><figcaption>Manhattan plot</figcaption></figure>
+    <figure><img src="img/27-haplo-locus.png" alt="Haplotypes at a locus" loading="lazy"><figcaption>Haplotypes at a locus</figcaption></figure>
+  </div>
+</div></section>
+
+<section id="install"><div class="wrap">
+  <h2>Install</h2>
+  <ol class="steps">
+    <li>Download <b>HapGUI-&hellip;-Setup.exe</b> with the button above.</li>
+    <li>Run it and choose <b>Only for me</b>. No administrator rights are needed.</li>
+    <li>Open <b>HapGUI</b> from the Start menu.</li>
+  </ol>
+  <div class="note"><b>Windows may show a blue &ldquo;Windows protected your PC&rdquo; screen.</b> The installer is not yet code-signed. Click <b>More info</b>, then <b>Run anyway</b>.</div>
+  <h2 style="margin-top:30px">Requirements</h2>
+  <table>
+    <tr><td>Operating system</td><td>Windows 10 or 11, 64-bit</td></tr>
+    <tr><td>Memory</td><td>8 GB RAM recommended. Large VCF files need more, so close other programs while extracting.</td></tr>
+    <tr><td>Disk space</td><td>About 3 GB, plus room for your results.</td></tr>
+    <tr><td>Inside the app</td><td>R, Java, PLINK 2, TASSEL and the 3K-RICE data are all bundled. Nothing else to install.</td></tr>
+  </table>
+</div></section>
+
+<section id="help"><div class="wrap">
+  <h2>Help</h2>
+  <p class="sub">The same manual is built into the app (Help tab).</p>
+  <p><a class="btn" href="HapGUI_User_Manual.pdf">User manual (PDF)</a></p>
+  <p>Questions or problems? Contact <b>Dr. Pallavi Sinha</b> &ndash; <a href="mailto:P.sinha@cgiar.org">P.sinha@cgiar.org</a></p>
+</div></section>
+</main>
+
+<footer><div class="wrap"><img src="irri-logo.png" alt="IRRI">Powered by IRRI South Asia Hub &middot; Contact: Dr. Pallavi Sinha &ndash; <a href="mailto:P.sinha@cgiar.org">P.sinha@cgiar.org</a></div></footer>
+
+<script>
+// The download buttons always point at the newest GitHub release. Owner/repo come from this page's own address
+// (owner.github.io/repo/), so nothing here needs editing if the repository is renamed.
+(function () {
+  var m = location.hostname.match(/^([^.]+)\.github\.io$/i);
+  var owner = m ? m[1] : 'IRRISouthAsiaHub';
+  var repo = (location.pathname.split('/')[1]) || 'HapGUI';
+  if (!m) repo = 'HapGUI';
+  var releases = 'https://github.com/' + owner + '/' + repo + '/releases/latest';
+  var setup = document.getElementById('dl-setup'), zip = document.getElementById('dl-zip'), meta = document.getElementById('dl-meta');
+  setup.href = releases; zip.href = releases;
+  var mb = function (b) { return Math.round(b / 1048576) + ' MB'; };
+  fetch('https://api.github.com/repos/' + owner + '/' + repo + '/releases/latest')
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+    .then(function (rel) {
+      var a = rel.assets || [];
+      var s = a.find(function (x) { return /Setup\.exe$/i.test(x.name); });
+      var z = a.find(function (x) { return /Portable\.zip$/i.test(x.name); });
+      if (s) { setup.href = s.browser_download_url; setup.textContent = 'Download for Windows (' + mb(s.size) + ')'; }
+      if (z) zip.href = z.browser_download_url;
+      meta.textContent = 'Version ' + String(rel.tag_name || '').replace(/^v/, '') + ' Â· Windows 10 or 11, 64-bit Â· free Â· released ' + new Date(rel.published_at).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+    })
+    .catch(function () { /* no release yet or offline: the buttons open the releases page */ });
+})();
+</script>
+</body>
+</html>
+
