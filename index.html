@@ -57,9 +57,8 @@
   <p class="lead">Phenotype analysis, GWAS and haplotype–phenotype analysis for rice in one Windows app. Everything it needs is inside the installer, so there is nothing else to set up.</p>
   <p>
     <a class="btn" id="dl-setup" href="#">Download for Windows</a>
-    <a class="btn alt" id="dl-zip" href="#">Portable version (.zip)</a>
+    <a class="btn alt" id="dl-demo" href="#">Demo files and input examples (.zip, 12 MB)</a>
   </p>
-  <p><a id="dl-demo" href="#" style="font-size:15px">Demo files and input examples (.zip, 12 MB)</a></p>
   <p class="meta" id="dl-meta">Windows 10 or 11, 64-bit &middot; free</p>
   <img class="shot" src="img/01-home.png" alt="HapGUI home screen">
 </div>
@@ -122,18 +121,16 @@
   var repo = (location.pathname.split('/')[1]) || 'HapGUI';
   if (!m) repo = 'HapGUI';
   var releases = 'https://github.com/' + owner + '/' + repo + '/releases/latest';
-  var setup = document.getElementById('dl-setup'), zip = document.getElementById('dl-zip'), meta = document.getElementById('dl-meta');
+  var setup = document.getElementById('dl-setup'), meta = document.getElementById('dl-meta');
   var demo = document.getElementById('dl-demo');
-  setup.href = releases; zip.href = releases; demo.href = releases;
+  setup.href = releases; demo.href = releases;
   var mb = function (b) { return Math.round(b / 1048576) + ' MB'; };
   fetch('https://api.github.com/repos/' + owner + '/' + repo + '/releases/latest')
     .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
     .then(function (rel) {
       var a = rel.assets || [];
       var s = a.find(function (x) { return /Setup\.exe$/i.test(x.name); });
-      var z = a.find(function (x) { return /Portable\.zip$/i.test(x.name); });
       if (s) { setup.href = s.browser_download_url; setup.textContent = 'Download for Windows (' + mb(s.size) + ')'; }
-      if (z) zip.href = z.browser_download_url;
       var d = a.find(function (x) { return /demo_files\.zip$/i.test(x.name); });
       if (d) demo.href = d.browser_download_url;
       meta.textContent = 'Version ' + String(rel.tag_name || '').replace(/^v/, '') + ' · Windows 10 or 11, 64-bit · free · released ' + new Date(rel.published_at).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
